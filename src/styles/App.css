@@ -1,1 +1,22 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
 
+.parent {
+  background-color: green;
+  padding: 22px;
+  height: 90vh;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 22;
+}
+.child_container {
+  width: 500px;
+  background-color: aqua;
+  height: 70px;
+  padding: 22px;
+  margin: 12px 0px;
+}
