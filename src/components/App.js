@@ -4,12 +4,12 @@ import ChildCom from "./ChildCom";
 
 const App = () => {
   const [state, setState] = useState(Data);
-  const [option, setOption] = useState("");
+  const [selectedOption, setSelectedOption] = useState("");
   return (
     <div className="parent">
       <h1>Parent Component</h1>
-      <ChildCom state={state} setOption={setOption} />
-      <p>Selected Option : {option ?? ""}</p>
+      <ChildCom state={state} setOption={setSelectedOption} />
+      <p>Selected Option : {selectedOption ?? ""}</p>
     </div>
   );
 };
