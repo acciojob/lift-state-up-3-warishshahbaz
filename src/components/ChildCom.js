@@ -1,22 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 
-function ChildCom({ state, setOption }) {
+function ChildCom({ setOption }) {
   return (
     <>
       <div className="wrapper">
-        {state.map((val) => {
-          return (
-            <div
-              style={{ backgroundColor: `${val.bg}` }}
-              className="child_container"
-            >
-              <p>{val.title}</p>
-              <button onClick={() => setOption(val.option)}>
-                {val.option}
-              </button>
-            </div>
-          );
-        })}
+        <div style={{ backgroundColor: `#c95a1a` }} className="child_container">
+          <p className="p">Child Component 1</p>
+          <button onClick={() => setOption("Option 1")}>Option 1</button>
+        </div>
+        <div style={{ backgroundColor: `#fcce00` }} className="child_container">
+          <p className="p">Child Component 2</p>
+          <button onClick={() => setOption("Option 2")}>Option 2</button>
+        </div>
       </div>
     </>
   );
