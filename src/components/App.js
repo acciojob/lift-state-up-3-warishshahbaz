@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Components1 from "./Components1";
-import Components2 from "./Components2";
+import Components1 from "./component1";
+import Components2 from "./component2";
 
 const App = () => {
   const [selectedOption, setSelectedOption] = useState("");
