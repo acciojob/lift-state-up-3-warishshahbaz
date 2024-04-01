@@ -1,15 +1,26 @@
 import React, { useState } from "react";
-import "./../styles/App.css";
-import ChildCom from "./ChildCom";
+import Components1 from "./Components1";
+import Components2 from "./Components2";
 
 const App = () => {
   const [selectedOption, setSelectedOption] = useState("");
+  const selectedoption = (option) => {
+    console.log(option);
+    setSelectedOption(option);
+  };
+
   return (
-    <div className="parent">
-      <h1>Parent Component</h1>
-      <ChildCom setOption={setSelectedOption} />
-      <p className="selected">Selected Option : {selectedOption ?? ""}</p>
-    </div>
+    <>
+      <div
+        className="parent"
+        style={{ width: "500px", height: "300px", backgroundColor: "yellow" }}
+      >
+        <h1 style={{ textAlign: "center" }}>Parent Component</h1>
+        <Components1 selectedoption={selectedoption} />
+        <Components2 selectedoption={selectedoption} />
+        <p>Selected Option: {selectedOption}git </p>
+      </div>
+    </>
   );
 };
 
